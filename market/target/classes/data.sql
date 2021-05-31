@@ -1,0 +1,1 @@
+insert into account(userid, accountbalance, cards ) values(1, 5000, '');
