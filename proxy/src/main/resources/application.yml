@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+zuul:
+  prefix: /api
+  routes:
+    web:
+      path: /web/**
+      url: http://localhost:8081/web
+    user:
+      path: /user/**
+      url: http://localhost:8082/user
+    card:
+      path: /card/**
+      url: http://localhost:8083/card
+
+endpoints:
+  trace:
+    sensitive: false
+
+ribbon:
+  eureka:
+    enabled: false
